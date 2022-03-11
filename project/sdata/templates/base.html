@@ -14,7 +14,7 @@
   <div class="container d-flex align-items-center"></div>
   <nav class="navbar navbar-expand-lg navbar-light" style="background-color: white;">
 
-    <a class="navbar-brand" href="{{ url_for('snake_data.index') }}">SData</a>
+    <a class="navbar-brand" href="{{ url_for('sdata.index') }}">SData</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -22,7 +22,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <a class="nav-link {% if nav_index %}active{% endif %}" href="{{ url_for('snake_data.index') }}">Home</a>
+          <a class="nav-link {% if nav_index %}active{% endif %}" href="{{ url_for('sdata.index') }}">Home</a>
         </li>
       </ul>
     </div>
