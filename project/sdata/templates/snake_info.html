@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block nav %}{% endblock %}
+{% block head %}
+{{super()}}
+<head>
+  <style></style>
+</head>
+
+{% endblock %}
+{% block content %}
+<div class="container" style="padding-top: 10px;margin: auto;max-width: 800px;">
+<h2 style="text-align: center;">Snake Information</h2>
+<div class="card" style="width: 100%;">
+  <img class="card-img-top" src=".../100px180/?text=Image cap" alt="Card image cap">
+  <img class="card-img-top" src=".../100px180/?text=Image cap" alt="Card image cap">
+  <img class="card-img-top" src=".../100px180/?text=Image cap" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{snake_intel.name_en}} ({{snake_intel.name_scientific}})</h5>
+    <h6 class="card-subtitle mb-2 text-muted">{{ snake_intel.name_bm }}</h6>
+    <!--<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Family: {{snake_intel.family}}</li>
+    <li class="list-group-item">Location: {{snake_intel.snake_location}}</li>
+    <li class="list-group-item">Habitat: {{snake_intel.habitat}}</li>
+    <li class="list-group-item">Circadian rhythm: {{snake_intel.circadian}}</li>
+    
+    <li class="list-group-item">Venom status: {{snake_intel.venom_status}}</li>
+    <!--<li class="list-group-item">Type of Antivenom: {{snake_intel.antivenom}}-->
+    
+    <li class="list-group-item">
+      {% for a in antivenom_list %}
+      <h1>{{snake_intel.id}} {{ a }}</h1>
+      {% endfor %}
+    </li>
+    
+    <li class="list-group-item">MyBIS info: {{snake_intel.mybis}}</li>
+  </ul>
+  <!--<div class="card-body">
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div>-->
+</div>
+</div>
+{% endblock %}

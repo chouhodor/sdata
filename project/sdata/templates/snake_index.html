@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% block nav %}{% endblock %}
+{% block head %}
+{{super()}}
+<head>
+  <style></style>
+</head>
+
+{% endblock %}
+{% block content %}
+    <h1>SNAKE DATA app</h1>
+    <div class="container">
+        <form action={{url_for('snake_data.get_snake_list')}} method="POST">
+            <select class="form-select" name="region" id="region" onchange="this.form.submit()">
+              <option value="" disabled selected>
+                {% if region %}
+                    {{ region }}
+                {% else %}
+                    Select state
+                {% endif %}
+            
+            </option>
+              <option value="pahang">pahang</option>
+              <option value="kelantan">kelantan</option>
+              <option value="terengganu">terengganu</option>
+              <option value="johor">johor</option>
+              <option value="melaka">melaka</option>
+              <option value="selangor">selangor</option>
+              <option value="kuala_lumpur">kuala lumpur</option>
+              <option value="negeri_sembilan">negeri sembilan</option>
+              <option value="perak">perak</option>
+              <option value="kedah">kedah</option>
+              <option value="penang">penang</option>
+              <option value="perlis">perlis</option>
+              <option value="putrajaya">putrajaya</option>
+              <option value="sabah">sabah</option>
+              <option value="sarawak">sarawak</option>
+              <option value="labuan">labuan</option>
+              <option value="tioman">tioman</option>
+              <option value="langkawi">langkawi</option>
+            </select>
+        </form>
+    </div>
+
+    <div class="container">
+        <form action={{url_for('snake_data.get_snake_family')}} method="POST">
+            <select class="form-select" name="family" id="family" onchange="this.form.submit()">
+              <option value="" disabled selected>
+                {% if family %}
+                    {{ family }}
+                {% else %}
+                    Select family
+                {% endif %}
+            
+            </option>
+              <option>Natricidae</option>
+              <option>Elapidae</option>
+              <option>Pythonidae</option>
+              <option>Viperidae</option>
+            </select>
+        </form>
+    </div>
+
+    {% if snake_data %}
+
+        {% for snake in snake_data %}
+            <p>{{snake}}</p>
+        {% endfor %}
+
+    {% endif%}
+{% endblock %}
