@@ -11,21 +11,11 @@
 {% endblock %}
 <body>
   <header id="header" class="fixed-top">
-  <div class="container d-flex align-items-center"></div>
-  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: white;">
+  <div class="container d-flex align-items-center" style="max-width: 900px;background-color: white;">
+  <nav class="navbar navbar-expand-lg navbar-light">
 
     <a class="navbar-brand" href="{{ url_for('sdata.index') }}">SData</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <a class="nav-link {% if nav_index %}active{% endif %}" href="{{ url_for('sdata.index') }}">Home</a>
-        </li>
-      </ul>
-    </div>
+    <a class="navbar-brand {% if nav_index %}active{% endif %}" href="{{ url_for('sdata.index') }}">Home</a>
     </nav>
   </div>
   
@@ -33,11 +23,13 @@
 
   {% block content %}
   {% endblock %}
+
   {% block scripts %}
 
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
   <script src='https://unpkg.com/popper.js@1.14.7/dist/umd/popper.min.js'></script>
   <script src="../static/js/bootstrap.min.js"></script>
+  <script src="../static/js/picla.min.js"></script>
   {% endblock %}
 </body>
 

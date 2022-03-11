@@ -2,82 +2,92 @@
 {% block nav %}{% endblock %}
 {% block head %}
 {{super()}}
-
 <head>
     <style>
-        .select {
-            display: inline-block;
-        }
+        .label-class {
+        background-color: rgba(0, 0, 0, .75);
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+}
     </style>
 </head>
 
 {% endblock %}
 {% block content %}
 
-<div class="container">
+<div class="container" style="padding: 0.8rem;">
     <h1>SNAKE DATA app</h1>
     <div class="form-inline">
-        <div class="form-group col-lg-12">
-            <form action={{url_for('sdata.get_snake_list')}} method="POST">
-                <select name="region" id="region" onchange="this.form.submit()">
-                    <option value="" disabled selected>
-                        {% if region %}
-                        {{ region }}
-                        {% else %}
-                        Select state
-                        {% endif %}
+        <div class="form-row">
+            <div class="col" style="margin: auto;">
+                <form action={{url_for('sdata.get_snake_list')}} method="POST">
+                    <select name="region" id="region" onchange="this.form.submit()" style="width: 130px;">
+                        <option value="" disabled selected>
+                            {% if region %}
+                            {{ region }}
+                            {% else %}
+                            Select state
+                            {% endif %}
 
-                    </option>
-                    <option value="pahang">pahang</option>
-                    <option value="kelantan">kelantan</option>
-                    <option value="terengganu">terengganu</option>
-                    <option value="johor">johor</option>
-                    <option value="melaka">melaka</option>
-                    <option value="selangor">selangor</option>
-                    <option value="kuala_lumpur">kuala lumpur</option>
-                    <option value="negeri_sembilan">negeri sembilan</option>
-                    <option value="perak">perak</option>
-                    <option value="kedah">kedah</option>
-                    <option value="penang">penang</option>
-                    <option value="perlis">perlis</option>
-                    <option value="putrajaya">putrajaya</option>
-                    <option value="sabah">sabah</option>
-                    <option value="sarawak">sarawak</option>
-                    <option value="labuan">labuan</option>
-                    <option value="tioman">tioman</option>
-                    <option value="langkawi">langkawi</option>
-                </select>
-            </form>
+                        </option>
+                        <option value="pahang">pahang</option>
+                        <option value="kelantan">kelantan</option>
+                        <option value="terengganu">terengganu</option>
+                        <option value="johor">johor</option>
+                        <option value="melaka">melaka</option>
+                        <option value="selangor">selangor</option>
+                        <option value="kuala_lumpur">kuala lumpur</option>
+                        <option value="negeri_sembilan">negeri sembilan</option>
+                        <option value="perak">perak</option>
+                        <option value="kedah">kedah</option>
+                        <option value="penang">penang</option>
+                        <option value="perlis">perlis</option>
+                        <option value="putrajaya">putrajaya</option>
+                        <option value="sabah">sabah</option>
+                        <option value="sarawak">sarawak</option>
+                        <option value="labuan">labuan</option>
+                        <option value="tioman">tioman</option>
+                        <option value="langkawi">langkawi</option>
+                    </select>
+                </form>
+            </div>
+            <div class="col">
+                &nbsp OR &nbsp
+            </div>
+            <div class="col">
+                <form action={{url_for('sdata.get_snake_family')}} method="POST">
+                    <select name="family" id="family" onchange="this.form.submit()" style="width: 130px;">
+                        <option value="" disabled selected>
+                            {% if family %}
+                            {{ family }}
+                            {% else %}
+                            Select family
+                            {% endif %}
 
-            &nbsp&nbsp OR &nbsp&nbsp
-
-            <form action={{url_for('sdata.get_snake_family')}} method="POST">
-                <select name="family" id="family" onchange="this.form.submit()">
-                    <option value="" disabled selected>
-                        {% if family %}
-                        {{ family }}
-                        {% else %}
-                        Select family
-                        {% endif %}
-
-                    </option>
-                    <option>Natricidae</option>
-                    <option>Elapidae</option>
-                    <option>Pythonidae</option>
-                    <option>Viperidae</option>
-                </select>
-            </form>
+                        </option>
+                        <option>Natricidae</option>
+                        <option>Elapidae</option>
+                        <option>Pythonidae</option>
+                        <option>Viperidae</option>
+                    </select>
+                </form>
+            </div>
+            <br>
         </div>
+
     </div>
     <div class="container">
-    <br>
-    {% if snake_data %}
+        <br>
+        {% if snake_data %}
 
-    {% for snake in snake_data %}
-    <p>{{snake}}</p>
-    {% endfor %}
+        {% for snake in snake_data %}
 
-    {% endif%}
+        <a href="{{url_for('sdata.snake_info', id=snake.id)}}"><img src="../static/snake_img/{{snake.id}}/{{snake.id}}_1.png" class="img-responsive picla" data-label-class="label-class" style="max-width: 100%;height:auto;"
+            alt="{{snake.name_scientific}} ({{snake.name_en}})"></a>
+        {% endfor %}
+
+        {% endif%}
     </div>
 </div>
 {% endblock %}

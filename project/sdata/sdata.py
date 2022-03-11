@@ -1,5 +1,8 @@
 from flask import Blueprint, render_template , url_for, request, redirect
 from ..models import Snakes, Snake_location
+from os import listdir
+from os.path import isfile, join
+import os
 
 
 sdata = Blueprint('sdata', __name__, template_folder='templates', static_folder='static')
@@ -26,7 +29,7 @@ def get_snake_list():
 
         snake_data = [Snakes.query.get(i) for i in data_list]
 
-        snake_data = [a.name_en for a in snake_data]
+        snake_data = [a for a in snake_data]
 
         return render_template('snake_index.html',
         snake_data=snake_data,
@@ -38,15 +41,8 @@ def get_snake_family():
 
     family = request.form['family']
 
-    data_list = []
-
     if request.method == 'POST':
-        snake_list = Snakes.query.filter_by(family=family).all()
-
-        for s in snake_list:
-            data_list.append(s.name_en)
-
-        snake_data = data_list
+        snake_data = Snakes.query.filter_by(family=family).all()
 
         return render_template('snake_index.html',
         snake_data=snake_data,
@@ -55,16 +51,22 @@ def get_snake_family():
 
 @sdata.route('/snake_info/<int:id>')
 def snake_info(id):
+
+    snake_intel = Snakes.query.get(id)
+
+    mypath = 'project/static/snake_img/' + str(id)
+
+    img_files = [f for f in listdir(mypath) if isfile(join(mypath, f))]
+
     def convert(string):
         li = list(string.split(","))
         return li
 
-    snake_intel = Snakes.query.get(id)
-    
     antivenom_list = convert(snake_intel.antivenom)
 
     return render_template('snake_info.html',
     snake_intel=snake_intel,
+    img_files=img_files,
     antivenom_list=antivenom_list
     )
 
@@ -78,3 +80,9 @@ def test():
     print(snake_list)
 
     return render_template('snake_index.html')
+
+    '''
+    def convert(string):
+        li = list(string.split(","))
+        return li
+    '''
