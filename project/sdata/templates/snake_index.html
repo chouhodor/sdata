@@ -20,35 +20,35 @@
     <h1>SNAKE DATA app</h1>
     <div class="form-inline">
         <div class="form-row">
-            <div class="col" style="margin: auto;">
+            <div class="col">
                 <form action={{url_for('sdata.get_snake_list')}} method="POST">
-                    <select name="region" id="region" onchange="this.form.submit()" style="width: 130px;">
+                    <select class="form-control" name="region" id="region" onchange="this.form.submit()" style="width: 140px;">
                         <option value="" disabled selected>
                             {% if region %}
-                            {{ region }}
+                            {{ region.title() }}
                             {% else %}
                             Select state
                             {% endif %}
 
                         </option>
-                        <option value="pahang">pahang</option>
-                        <option value="kelantan">kelantan</option>
-                        <option value="terengganu">terengganu</option>
-                        <option value="johor">johor</option>
-                        <option value="melaka">melaka</option>
-                        <option value="selangor">selangor</option>
-                        <option value="kuala_lumpur">kuala lumpur</option>
-                        <option value="negeri_sembilan">negeri sembilan</option>
-                        <option value="perak">perak</option>
-                        <option value="kedah">kedah</option>
-                        <option value="penang">penang</option>
-                        <option value="perlis">perlis</option>
-                        <option value="putrajaya">putrajaya</option>
-                        <option value="sabah">sabah</option>
-                        <option value="sarawak">sarawak</option>
-                        <option value="labuan">labuan</option>
-                        <option value="tioman">tioman</option>
-                        <option value="langkawi">langkawi</option>
+                        <option value="pahang">Pahang</option>
+                        <option value="kelantan">Kelantan</option>
+                        <option value="terengganu">Terengganu</option>
+                        <option value="johor">Johor</option>
+                        <option value="melaka">Melaka</option>
+                        <option value="selangor">Selangor</option>
+                        <option value="kuala_lumpur">Kuala Lumpur</option>
+                        <option value="negeri_sembilan">Negeri Sembilan</option>
+                        <option value="perak">Perak</option>
+                        <option value="kedah">Kedah</option>
+                        <option value="penang">Penang</option>
+                        <option value="perlis">Perlis</option>
+                        <option value="putrajaya">Putrajaya</option>
+                        <option value="sabah">Sabah</option>
+                        <option value="sarawak">Sarawak</option>
+                        <option value="labuan">Labuan</option>
+                        <option value="tioman">Tioman</option>
+                        <option value="langkawi">Langkawi</option>
                     </select>
                 </form>
             </div>
@@ -57,7 +57,7 @@
             </div>
             <div class="col">
                 <form action={{url_for('sdata.get_snake_family')}} method="POST">
-                    <select name="family" id="family" onchange="this.form.submit()" style="width: 130px;">
+                    <select class="form-control" name="family" id="family" onchange="this.form.submit()" style="width: 140px;">
                         <option value="" disabled selected>
                             {% if family %}
                             {{ family }}
@@ -84,10 +84,13 @@
         {% for snake in snake_data %}
 
         <a href="{{url_for('sdata.snake_info', id=snake.id)}}"><img src="../static/snake_img/{{snake.id}}/{{snake.id}}_1.png" class="img-responsive picla" data-label-class="label-class" style="max-width: 100%;height:auto;"
-            alt="{{snake.name_scientific}} ({{snake.name_en}})"></a>
+            alt="{{snake.name_scientific}}<br>({{snake.name_en}})"></a>
         {% endfor %}
 
         {% endif%}
     </div>
+    <br>
+    <br>
+    <br>
 </div>
 {% endblock %}
