@@ -83,7 +83,7 @@
 
         {% for snake in snake_data %}
 
-        <a href="{{url_for('sdata.snake_info', id=snake.id)}}"><img src="../static/snake_img/{{snake.id}}/{{snake.id}}_1.png" class="img-responsive picla" data-label-class="label-class" style="max-width: 100%;height:auto;"
+        <a href="{{url_for('sdata.snake_info', id=snake.id)}}"><img src="{{url_for('sdata.images', id=snake.id)}}" class="img-responsive picla" data-label-class="label-class" style="max-width: 100%;height:auto;"
             alt="{{snake.name_scientific}}<br>({{snake.name_en}})"></a>
         {% endfor %}
 

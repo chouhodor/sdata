@@ -13,7 +13,7 @@
   <h2 style="text-align: center;">Snake Information</h2>
   <div class="card" style="width: 100%;">
     {% for i in img_files %}
-    <img class="card-img-top" src="../static/snake_img/{{snake_intel.id}}/{{ i }}" alt="Card image cap">
+    <img class="card-img-top" src="{{url_for('sdata.img_info', id=snake_intel.id, filename=i )}}" alt="Card image cap">
     {% endfor %}
 
     <div class="card-body">

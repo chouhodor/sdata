@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template , url_for, request, redirect
+from flask import Blueprint, render_template , url_for, request, redirect, send_from_directory
 from ..models import Snakes, Snake_location
 from os import listdir
 from os.path import isfile, join
@@ -69,6 +69,19 @@ def snake_info(id):
     img_files=img_files,
     antivenom_list=antivenom_list
     )
+
+
+@sdata.route('/images/<int:id>')
+def images(id):
+
+    filename = str(id) + '_1.png'
+    return send_from_directory('static/snake_img/' + str(id), filename)
+
+@sdata.route('/img_info/<int:id>/<filename>')
+def img_info(id, filename):
+
+    return send_from_directory('static/snake_img/' + str(id), filename)
+
 
 
 @sdata.route('/test')
