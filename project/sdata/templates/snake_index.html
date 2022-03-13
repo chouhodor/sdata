@@ -89,6 +89,18 @@
 
         {% endif%}
     </div>
+    <div class="container" style="display: none;">
+        <br>
+        {% if snake_cache %}
+
+        {% for snake in snake_cache %}
+
+        <a href="{{url_for('sdata.snake_info', id=snake.id)}}"><img src="{{url_for('sdata.images', id=snake.id)}}" class="img-responsive picla" data-label-class="label-class" style="max-width: 100%;height:auto;"
+            alt="{{snake.name_scientific}}<br>({{snake.name_en}})"></a>
+        {% endfor %}
+
+        {% endif%}
+    </div>
     <br>
     <br>
     <br>

@@ -11,8 +11,11 @@ sdata = Blueprint('sdata', __name__, template_folder='templates', static_folder=
 def index():
 
     snake_data = []
+    snake_cache = Snakes.query.all()
 
-    return render_template('snake_index.html')
+    return render_template('snake_index.html',
+    snake_cache=snake_cache
+    )
 
 @sdata.route('/get_snake_list', methods=['POST'])
 def get_snake_list():
