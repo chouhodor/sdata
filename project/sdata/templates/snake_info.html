@@ -23,20 +23,46 @@
     </div>
     <ul class="list-group list-group-flush">
       <li class="list-group-item">Family: {{snake_intel.family}}</li>
-      <li class="list-group-item">Location: {{snake_intel.snake_location}}</li>
-      <li class="list-group-item">Habitat: {{snake_intel.habitat}}</li>
-      <li class="list-group-item">Circadian rhythm: {{snake_intel.circadian}}</li>
+      <li class="list-group-item">Geographic distribution: {{snake_intel.snake_location}}<br>
+        <img class="card-img-top mx-auto" src="{{url_for('sdata.geo', id=snake_intel.id )}}" alt="Card image cap" style="max-width: 355px;display: block;">
+      </li>
+
+      <li class="list-group-item">Habitat: <br>
+      {% for h in convert(snake_intel.habitat) %}
+        {{h}}
+         <img class="img-fluid" src="{{url_for('sdata.static', filename='logo/')}}{{h +'.png'}}" alt="Card image cap" style="max-width: 32px;">    
+         <br>
+       {% endfor %}
+      </li>
+
+      <li class="list-group-item">Circadian rhythm:<br>
+      {% for c in convert(snake_intel.circadian) %}
+       {{c}}
+        <img class="img-fluid" src="{{url_for('sdata.static', filename='logo/')}}{{c +'.png'}}" alt="Card image cap" style="max-width: 48px;">    
+        <br>
+      {% endfor %}
+      </li>
+      
+
       {% if snake_intel.venom_status=='venomous' %}
-      <li class="list-group-item" style="color:red">Venom status: {{snake_intel.venom_status}}</li>
+      <li class="list-group-item" style="color:red">Venom status: {{snake_intel.venom_status}} 
+        <img class="img-fluid" src="{{url_for('sdata.static', filename='logo/')}}{{snake_intel.venom_status+'.png'}}" alt="Card image cap" style="max-width: 32px;">
+      </li>
       {% elif snake_intel.venom_status=='non-venomous' %}
-      <li class="list-group-item" style="color:green">Venom status: {{snake_intel.venom_status}}</li>
+      <li class="list-group-item" style="color:green">Venom status: {{snake_intel.venom_status}}
+        <img class="img-fluid" src="{{url_for('sdata.static', filename='logo/')}}{{snake_intel.venom_status+'.png'}}" alt="Card image cap" style="max-width: 32px;">
+      </li>
+      {% elif snake_intel.venom_status=='undetermined' %}
+      <li class="list-group-item">Venom status: {{snake_intel.venom_status}}
+        <img class="img-fluid" src="{{url_for('sdata.static', filename='logo/')}}{{snake_intel.venom_status+'.png'}}" alt="Card image cap" style="max-width: 32px;">
+      </li>
       {% else %}
       <li class="list-group-item">Venom status: {{snake_intel.venom_status}}</li>
       {% endif %}
 
 
       <li class="list-group-item">Antivenom: <br>
-        {% for a in antivenom_list %}
+        {% for a in convert(snake_intel.antivenom) %}
         {{ a }}<br>
         {% endfor %}
       </li>
@@ -49,7 +75,6 @@
     <a href="#" class="card-link">Another link</a>
   </div>-->
   </div>
-  <br>
   <br>
   <br>
 </div>

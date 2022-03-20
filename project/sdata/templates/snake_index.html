@@ -16,13 +16,13 @@
 {% endblock %}
 {% block content %}
 
-<div class="container" style="padding: 0.8rem;margin: 0 auto;max-width: 850px;">
-    <h1>SNAKE DATA app</h1>
+<div class="container" style="padding-top: 10px;margin: auto;max-width: 700px;">
+    <h3 style="text-align: center;">Companion Webapp</h3>
     <div class="form-inline">
-        <div class="form-row">
-            <div class="col">
+        <div class="form-row" style="text-align: center;margin: 0 auto;">
+            <div class="col my-auto">
                 <form action={{url_for('sdata.get_snake_list')}} method="POST">
-                    <select class="form-control" name="region" id="region" onchange="this.form.submit()" style="width: 140px;">
+                    <select class="form-control align-items-center" name="region" id="region" onchange="this.form.submit()" style="display:inline-block;">
                         <option value="" disabled selected>
                             {% if region %}
                             {{ region.title() }}
@@ -52,12 +52,12 @@
                     </select>
                 </form>
             </div>
-            <div class="col">
+            <div class="col-1">
                 &nbsp OR &nbsp
             </div>
-            <div class="col">
+            <div class="col my-auto">
                 <form action={{url_for('sdata.get_snake_family')}} method="POST">
-                    <select class="form-control" name="family" id="family" onchange="this.form.submit()" style="width: 140px;">
+                    <select class="form-control align-items-center" name="family" id="family" onchange="this.form.submit()" style="display: inline-block;">
                         <option value="" disabled selected>
                             {% if family %}
                             {{ family }}
@@ -77,14 +77,25 @@
         </div>
 
     </div>
+
+    {% if snake_data %}
+
+    {% else %}
+    <div style="padding:1rem">
+    <img src="{{url_for('sdata.static', filename='front/front.png')}}" class="img-fluid mx-auto">
+    <a href="https://www.mybis.gov.my/pd/445"><button type="button" class="btn btn-success" style="width: 100%;border-top-right-radius: 0;border-top-left-radius: 0;">Download ebook</button></a>
+    <!--<img src="{{url_for('sdata.static', filename='front/back.png')}}" class="img-fluid">-->
+    </div>
+    {% endif %}
+
     <div class="container">
         <br>
         {% if snake_data %}
 
         {% for snake in snake_data %}
 
-        <a href="{{url_for('sdata.snake_info', id=snake.id)}}"><img src="{{url_for('sdata.images', id=snake.id)}}" class="img-responsive picla" data-label-class="label-class" style="max-width: 100%;height:auto;"
-            alt="{{snake.name_scientific}}<br>({{snake.name_en}})"></a>
+        <a href="{{url_for('sdata.snake_info', id=snake.id)}}"><img src="{{url_for('sdata.thumbnails', id=snake.id)}}" class="img-fluid"></a>
+        <hr>
         {% endfor %}
 
         {% endif%}
@@ -95,13 +106,11 @@
 
         {% for snake in snake_cache %}
 
-        <a href="{{url_for('sdata.snake_info', id=snake.id)}}"><img src="{{url_for('sdata.images', id=snake.id)}}" class="img-responsive picla" data-label-class="label-class" style="max-width: 100%;height:auto;"
-            alt="{{snake.name_scientific}}<br>({{snake.name_en}})"></a>
+        <a href="{{url_for('sdata.snake_info', id=snake.id)}}"><img src="{{url_for('sdata.thumbnails', id=snake.id)}}" class="img-fluid"></a>
         {% endfor %}
 
         {% endif%}
     </div>
-    <br>
     <br>
     <br>
 </div>

@@ -65,25 +65,31 @@ def snake_info(id):
         li = list(string.split(","))
         return li
 
-    antivenom_list = convert(snake_intel.antivenom)
-
     return render_template('snake_info.html',
     snake_intel=snake_intel,
     img_files=img_files,
-    antivenom_list=antivenom_list
+    convert=convert
     )
 
 
-@sdata.route('/images/<int:id>')
-def images(id):
+@sdata.route('/thumbnails/<int:id>')
+def thumbnails(id):
 
-    filename = str(id) + '_1.png'
-    return send_from_directory('static/snake_img/' + str(id), filename)
+    filename = str(id) + '.png'
+    return send_from_directory('static/thumbnails', filename)
+    
 
 @sdata.route('/img_info/<int:id>/<filename>')
 def img_info(id, filename):
 
     return send_from_directory('static/snake_img/' + str(id), filename)
+
+
+@sdata.route('/img_info/<int:id>')
+def geo(id):
+
+    filename = str(id) + '.png'
+    return send_from_directory('static/geo', filename)
 
 
 
