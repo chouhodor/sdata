@@ -1,0 +1,36 @@
+1,Malayan Krait,Ular Katam Tebu,Bungarus candidus,Elapidae,Peninsular,terrestrial,nocturnal,venomous,"BCAV (Bungarus candidus Antivenom), NPAV (Neuro Polyvalent Snake Antivenom)",20831
+2,Banded Krait,Ular Katam Belang,Bungarus fasciatus,Elapidae,"Peninsular, Borneo",terrestrial,nocturnal,venomous,"BCAV (Bungarus fasciatus Antivenom), NPAV (Neuro Polyvalent Snake Antivenom)",9935
+3,Red-headed Krait,Ular Katam Kepala Merah,Bungarus flaviceps,Elapidae,"Peninsular, Borneo",terrestrial,nocturnal,venomous,NPAV (Neuro Polyvalent Snake Antivenom),9936
+4,Blue-malayan Coral Snake,Ular Pantai Biru,Calliophis bivirgatus,Elapidae,"Peninsular, Borneo","terrestrial,fossorial","nocturnal,diurnal",venomous,None,48553
+5,Spotted Coral Snake,Ular Pantai Bintik,Calliophis gracilis,Elapidae,Peninsular,"terrestrial,fossorial","nocturnal,diurnal",venomous,None,9937
+6,Malayan Striped Coral Snake,Ular Pantai Belang,Calliophis intestinalis,Elapidae,"Peninsular, Borneo","terrestrial,fossorial","nocturnal,diurnal",venomous,None,20886
+7,Speckled Coral Snake,Ular Pantai Bintik Kecil,Calliophis maculiceps,Elapidae,"Perlis, Kedah, Perak","terrestrial,fossorial","nocturnal,diurnal",venomous,None,20889
+8,Banded Malaysian Coral,,Calliophis nigrotaeniatus,Elapidae,"Pahang, Borneo","terrestrial,fossorial","nocturnal,diurnal",venomous,None,67720
+9,Monocled Cobra,Ular Senduk,Naja kouthia,Elapidae,"Perlis, Kedah, Perak, Selangor, Kelantan, upper Terengganu ","terrestrial,semi-aquatic","nocturnal,diurnal",venomous,"NKAV (Naja kaouthia Antivenom), NPAV (Neuro Polyvalent Snake Antivenom)",21355
+10,Sumatran Spitting Cobra,Ular Senduk Sembur,Naja sumatrana,Elapidae,"Peninsular, Borneo",terrestrial,"nocturnal,diurnal",venomous,"NKAV (Naja kaouthia Antivenom), NPAV (Neuro Polyvalent Snake Antivenom)",21356
+11,King Cobra,Ular Tedung Selar,Ophiophagus hannah,Elapidae,"Peninsular, Borneo","terrestrial,arboreal",diurnal,venomous,"OHAV (Ophiophagus hannah Antivenom), NPAV (Neuro Polyvalent Snake Antivenom)",9942
+12,Speckled Coral Snake,Ular Rabong Perut Bintik,Rhabdophis chrysargos,Natricidae,"Peninsular, Borneo",terrestrial,diurnal,undetermined,None,9927
+13,Red-bellied Keelback,,Rhabdophis conspicillatus,Natricidae,"Peninsular, Borneo","terrestrial,semi-arboreal","nocturnal,diurnal",non-venomous,None,9926
+14,Orange-necked Keelback,,Rhabdophis flaviceps,Natricidae,"Peninsular, Sarawak",semi-aquatic,,undetermined,None,21336
+15,Gunung Murud Keelback,,Rhabdophis murudensis,Natricidae,Borneo,fossorial,"nocturnal,diurnal",undetermined,None,21530
+16,Blue-necked Keelback,,Rhabdophis rhodomelas,Natricidae,"Peninsular, Borneo","terrestrial,fossorial","nocturnal,diurnal",undetermined,None,66278
+17,Thai Red-necked Keelback,,Rhabdophis siamensis,Natricidae,"Peninsular, Borneo","terrestrial,semi-arboreal","nocturnal,diurnal",venomous,RTAV (Rhabdophis tigrinus Antivenom),21531
+18,Reticulated Python,Ular Sawa Batik,Malayopython reticulatus,Pythonidae,"Peninsular, Borneo","terrestrial,arboreal,aquatic","nocturnal,diurnal",non-venomous,None,58057
+19,Borneo Python,Ular Ripen,Python breitensteini,Pythonidae,Borneo,terrestrial,"nocturnal,diurnal",non-venomous,None,21538
+20,Blood Python,Ular Sawa Darah,Python brongersmai,Pythonidae,Peninsular,terrestrial,"nocturnal,diurnal",non-venomous,None,21539
+21,Malayan Pit Viper,Ular Kapak Bodoh,Calloselasma rhodostoma,Viperidae,"Perlis, Kedah, Perak, Kuala Lumpur",terrestrial,"nocturnal,diurnal",venomous,"CRAV (Calloselasma rhodostoma Antivenom), HPAV (Hemato Polyvalent Snake Antivenom)",20891
+22,Kinabalu Brown Pit Viper,Ular Kapak Perang Kinabalu,Garthius chaseni,Viperidae,Sabah,terrestrial,"nocturnal,diurnal",venomous,"GPAV (Green Pit Viper Antivenin),  HPAV (Hemato Polyvalent Snake Antivenom)",22578
+23,Indon-malayan Mountain Pit Viper,Ular Kapak Gunung,Ovophis convictus,Viperidae,Pahang,terrestrial,"nocturnal,diurnal",venomous,"GPAV (Green Pit Viper Antivenin),  HPAV (Hemato Polyvalent Snake Antivenom)",21434
+24,Borneon Palm Pit Viper,Ular Kapak Borneo,Trimeresurus borneensis,Viperidae,Borneo,"terrstrial,arboreal","nocturnal,diurnal",venomous,"GPAV (Green Pit Viper Antivenin),  HPAV (Hemato Polyvalent Snake Antivenom)",21659
+25,Hagen's Pit Viper,Ular Kapak Hagen,Trimeresurus hageni,Viperidae,Peninsular,"arboreal,semi-arboreal","nocturnal,diurnal",venomous,"GPAV (Green Pit Viper Antivenin),  HPAV (Hemato Polyvalent Snake Antivenom)",9931
+26,Malcolm's Pit Viper,Ular Kapak Malcolm,Trimeresurus malcolmi,Viperidae,Sabah,"terrestrial,arboreal,semi-arboreal","nocturnal,diurnal",venomous,"GPAV (Green Pit Viper Antivenin),  HPAV (Hemato Polyvalent Snake Antivenom)",58145
+27,Cameron Highland's Pit Viper,Ular Kapak Cameron,Trimeresurus nebularis,Viperidae,Pahang,"arboreal,semi-arboreal","nocturnal,diurnal",venomous,"GPAV (Green Pit Viper Antivenin),  HPAV (Hemato Polyvalent Snake Antivenom)",58162
+28,Mangrove Pit Viper,Ular Kapak Bakau,Trimeresurus purpureomaculatus,Viperidae,West Peninsular,"arboreal,semi-arboreal","nocturnal,diurnal",venomous,"GPAV (Green Pit Viper Antivenin),  HPAV (Hemato Polyvalent Snake Antivenom)",57766
+29,Fairy Pit Viper,Ular Kapak Tioman,Trimeresurus sabahi buniana,Viperidae,Tioman Island,"arboreal,semi-arboreal","nocturnal,diurnal",venomous,"GPAV (Green Pit Viper Antivenin),  HPAV (Hemato Polyvalent Snake Antivenom)",58159
+30,Siamese Peninsular Pit Viper,,Trimeresurus sabahi fucatus,Viperidae,Peninsular,"arboreal,semi-arboreal","nocturnal,diurnal",venomous,"GPAV (Green Pit Viper Antivenin),  HPAV (Hemato Polyvalent Snake Antivenom)",58164
+31,,Ular Kapak Sabah,Trimeresurus sabahi sabahi,Viperidae,Borneo,arboreal,"nocturnal,diurnal",venomous,"GPAV (Green Pit Viper Antivenin),  HPAV (Hemato Polyvalent Snake Antivenom)",58159
+32,Sumatran Pit Viper,Ular Kapak Sumatra,Trimeresurus sumatranus ,Viperidae,"Peninsular, Borneo","arboreal,semi-arboreal","nocturnal,diurnal",venomous,"GPAV (Green Pit Viper Antivenin),  HPAV (Hemato Polyvalent Snake Antivenom)",58157
+33,Beautiful Pit Viper,,Trimeresurus venustus,Viperidae,Langkawi Island,"arboreal,semi-arboreal","nocturnal,diurnal",venomous,"GPAV (Green Pit Viper Antivenin),  HPAV (Hemato Polyvalent Snake Antivenom)",53771
+34,Wirot's Palm Pit Viper,,Trimeresurus wiroti,Viperidae,Peninsular except Terengganu/ Selangor,"terrestrial,semi-arboreal","nocturnal,diurnal",venomous,"GPAV (Green Pit Viper Antivenin),  HPAV (Hemato Polyvalent Snake Antivenom)",53772
+35,Bornean Keeled Pit Viper,,Tropidolaemus subannulatus,Viperidae,Borneo,arboreal,"nocturnal,diurnal",venomous,"GPAV (Green Pit Viper Antivenin),  HPAV (Hemato Polyvalent Snake Antivenom)",57443
+36,Wagler's Pit Viper,Ular Kapak Tokong,Tropidolaemus wagleri,Viperidae,Peninsular,"arboreal,semi-arboreal","nocturnal,diurnal",venomous,"GPAV (Green Pit Viper Antivenin),  HPAV (Hemato Polyvalent Snake Antivenom)",21662

@@ -17,7 +17,7 @@
     {% endfor %}
 
     <div class="card-body">
-      <h5 class="card-title">{{snake_intel.name_scientific}} ({{snake_intel.name_en}})</h5>
+      <h5 class="card-title"><i>{{snake_intel.name_scientific}}</i> ({{snake_intel.name_en}})</h5>
       <h6 class="card-subtitle mb-2 text-muted">{{ snake_intel.name_bm }}</h6>
       <!--<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
     </div>
@@ -61,7 +61,7 @@
       {% endif %}
 
 
-      <li class="list-group-item">Antivenom: <br>
+      <li class="list-group-item">Appropriate Antivenom: <br>
         {% for a in convert(snake_intel.antivenom) %}
         {{ a }}<br>
         {% endfor %}
