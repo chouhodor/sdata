@@ -12,6 +12,7 @@ class Snakes(db.Model):
     circadian = db.Column(db.String(50), nullable=True)
     venom_status = db.Column(db.String(50), nullable=True)
     antivenom = db.Column(db.String(50), nullable=True)
+    iucn = db.Column(db.String(50), nullable=True)
     mybis = db.Column(db.String(50), nullable=True)
     locations = db.relationship('Snake_location', backref = 'location', lazy='dynamic')
 

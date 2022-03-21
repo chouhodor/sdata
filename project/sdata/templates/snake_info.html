@@ -67,6 +67,22 @@
         {% endfor %}
       </li>
 
+      {% if snake_intel.iucn=='least' %}
+      <li class="list-group-item">IUCN Red List:
+        <img class="img-fluid" src="{{url_for('sdata.static', filename='logo/')}}{{snake_intel.iucn+'.png'}}" alt="Card image cap" style="max-width: 64px;">
+      </li>
+      {% elif snake_intel.iucn=='vulnerable' %}
+      <li class="list-group-item">IUCN Red List:
+        <img class="img-fluid" src="{{url_for('sdata.static', filename='logo/')}}{{snake_intel.iucn+'.png'}}" alt="Card image cap" style="max-width: 64px;">
+      </li>
+      {% elif snake_intel.iucn=='not_evaluated' %}
+      <li class="list-group-item">IUCN Red List: 
+        <img class="img-fluid" src="{{url_for('sdata.static', filename='logo/')}}{{snake_intel.iucn+'.png'}}" alt="Card image cap" style="max-width: 64px;">
+      </li>
+      {% else %}
+      <li class="list-group-item">IUCN Red List: None</li>
+      {% endif %}
+
       <li class="list-group-item">MyBIS info: <a href="https://www.mybis.gov.my/sp/{{snake_intel.mybis}}"
           target="blank">{{snake_intel.mybis}}</a></li>
     </ul>
