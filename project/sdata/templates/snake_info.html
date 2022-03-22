@@ -37,9 +37,13 @@
 
       <li class="list-group-item">Circadian rhythm:<br>
       {% for c in convert(snake_intel.circadian) %}
+      {% if c %}
        {{c}}
         <img class="img-fluid" src="{{url_for('sdata.static', filename='logo/')}}{{c +'.png'}}" alt="Card image cap" style="max-width: 48px;">    
         <br>
+      {% else %}
+        None
+      {% endif %}
       {% endfor %}
       </li>
       
