@@ -96,7 +96,6 @@ def geo(id):
 @sdata.route('/test')
 def test():
 
-
     snake_list = Snakes.query.get(3)
 
     print(snake_list)
