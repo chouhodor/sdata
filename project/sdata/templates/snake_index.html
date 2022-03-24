@@ -83,13 +83,13 @@
 
     {% else %}
     <div style="padding:1rem">
-    <img src="{{url_for('sdata.static', filename='front/front.png')}}" class="img-fluid mx-auto">
-    <a href="https://www.mybis.gov.my/pd/445"><button type="button" class="btn btn-success" style="width: 100%;border-top-right-radius: 0;border-top-left-radius: 0;">Download ebook</button></a>
+    <img id="front" name="front" src="{{url_for('sdata.static', filename='front/front.png')}}" class="img-fluid mx-auto" style="display: none;">
+    <a id="front" name="front" href="https://www.mybis.gov.my/pd/445"><button type="button" class="btn btn-success" style="width: 100%;border-top-right-radius: 0;border-top-left-radius: 0;display: none;">Download ebook</button></a>
     <!--<img src="{{url_for('sdata.static', filename='front/back.png')}}" class="img-fluid">-->
     </div>
     {% endif %}
 
-    <div class="container">
+    <div id="front" name="front" class="container" style="display: none;">
         <br>
         {% if snake_data %}
 
@@ -115,4 +115,14 @@
     <br>
     <br>
 </div>
+{% endblock %}
+
+{% block scripts %}
+{{ super()}}
+<script>
+$(document).ready(function() {
+    $('#front').delay(1000).fadeIn(1000);
+});
+</script>
+
 {% endblock %}
