@@ -96,14 +96,9 @@ def geo(id):
 @sdata.route('/test')
 def test():
 
-    snake_list = Snakes.query.get(3)
+    snake_data = []
+    snake_cache = Snakes.query.all()
 
-    print(snake_list)
-
-    return render_template('snake_index.html')
-
-    '''
-    def convert(string):
-        li = list(string.split(","))
-        return li
-    '''
+    return render_template('snake_index.html',
+    snake_cache=snake_cache
+    )
