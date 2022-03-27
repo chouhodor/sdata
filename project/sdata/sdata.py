@@ -17,6 +17,38 @@ def index():
     snake_cache=snake_cache
     )
 
+@sdata.route('/snake_info/<int:id>')
+def snake_info(id):
+
+    snake_intel = Snakes.query.get(id)
+
+    mypath = 'project/static/snake_img/' + str(id)
+
+    img_files = [f for f in listdir(mypath) if isfile(join(mypath, f))]
+
+    def convert(string):
+        li = list(string.split(","))
+        return li
+
+    return render_template('snake_info.html',
+    snake_intel=snake_intel,
+    img_files=img_files,
+    convert=convert
+    )
+
+@sdata.route('/search')
+def search():
+    snake_cache = Snakes.query.all()
+
+    return render_template('snake_search.html',
+    snake_cache=snake_cache
+    )
+
+
+
+
+################POSTS#############################
+
 @sdata.route('/get_snake_list', methods=['POST'])
 def get_snake_list():
 
@@ -52,25 +84,20 @@ def get_snake_family():
         family=family
         )
 
-@sdata.route('/snake_info/<int:id>')
-def snake_info(id):
+@sdata.route('/get_name_type', methods=['POST'])
+def get_name_type():
 
-    snake_intel = Snakes.query.get(id)
+    name_type = request.form['name_type']
 
-    mypath = 'project/static/snake_img/' + str(id)
+    if request.method == 'POST':
+        snake_cache = Snakes.query.all()
+        return render_template('snake_search.html',
+        name_type=name_type,
+        snake_cache=snake_cache
+        )
 
-    img_files = [f for f in listdir(mypath) if isfile(join(mypath, f))]
 
-    def convert(string):
-        li = list(string.split(","))
-        return li
-
-    return render_template('snake_info.html',
-    snake_intel=snake_intel,
-    img_files=img_files,
-    convert=convert
-    )
-
+#################IMAGES##################################
 
 @sdata.route('/thumbnails/<int:id>')
 def thumbnails(id):
@@ -96,9 +123,14 @@ def geo(id):
 @sdata.route('/test')
 def test():
 
-    snake_data = []
-    snake_cache = Snakes.query.all()
+    snake_list = Snakes.query.get(3)
 
-    return render_template('snake_index.html',
-    snake_cache=snake_cache
-    )
+    print(snake_list)
+
+    return render_template('snake_index.html')
+
+    '''
+    def convert(string):
+        li = list(string.split(","))
+        return li
+    '''

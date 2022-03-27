@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+{% block nav %}{% endblock %}
+{% block head %}
+{{super()}}
+<head>
+    <style>
+        .label-class {
+        background-color: rgba(0, 0, 0, .75);
+        color: #fff;
+        padding: 10px;
+        text-align: center;
+}
+    </style>
+</head>
+
+{% endblock %}
+{% block content %}
+
+<div class="container" style="padding-top: 10px;margin: auto;max-width: 700px;">
+    <h3 style="text-align: center;">Search Snake</h3>
+    <div class="form-inline">
+        <div class="form-row" style="margin: 0 auto;">
+            <div class="col my-auto">
+                <input type="text" class="form-control" placeholder="Search snake name" style="display: block;width: 100%;"/>
+            </div>
+            <div class="col my-auto">
+                <form action={{url_for('sdata.get_name_type')}} method="POST">
+                    <select class="form-control align-items-center" name="name_type" id="name_type" onchange="this.form.submit()" style="display: inline-block;">
+                        <option value="" disabled selected>
+                            {% if name_type == 'name_scientific' %}
+                            Scientific
+                            {% elif name_type == 'name_en' %}
+                            English
+                            {% elif name_type == 'name_bm' %}
+                            Bahasa Melayu
+                            {% else %}
+                            Select name type
+                            {% endif %}
+
+                        </option>
+                        <option value="name_scientific">Scientific</option>
+                        <option value="name_en" >English</option>
+                        <option value="name_bm">Bahasa Melayu</option>
+                    </select>
+                </form>
+            </div>
+            <br>
+        </div>
+        <div class="container" style="width: 400px;">
+            <ul class="live-search-list" type="None" >
+                {% for snake in snake_cache %}
+                {% if name_type == 'name_scientific' %}
+                <a href="{{url_for('sdata.snake_info', id=snake.id)}}" style="color:gray;"><li>{{snake.name_scientific}}</li></a>
+                {% elif name_type == 'name_en' %}
+                <a href="{{url_for('sdata.snake_info', id=snake.id)}}" style="color:gray;"><li>{{snake.name_en}}</li></a>
+                {% elif name_type == 'name_bm' %}
+                <a href="{{url_for('sdata.snake_info', id=snake.id)}}" style="color:gray;"><li>{{snake.name_bm}}</li></a>
+                {% else %}
+                <a href="{{url_for('sdata.snake_info', id=snake.id)}}" style="color:gray;"><li>{{snake.name_scientific}}</li></a>
+                {% endif %}
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+</div>
+{% endblock %}
+
+
+{% block scripts %}
+{{ super()}}
+<script type="text/javascript">
+    jQuery(document).ready(function($){
+  
+    $('.live-search-list li').each(function(){
+    $(this).attr('data-search-term', $(this).text().toLowerCase());
+    });
+    
+    $('.form-control').on('keyup', function(){
+    
+    var searchTerm = $(this).val().toLowerCase();
+    
+        $('.live-search-list li').each(function(){
+    
+            if ($(this).filter('[data-search-term *= ' + searchTerm + ']').length > 0 || searchTerm.length < 1) {
+                $(this).show();
+            } else {
+                $(this).hide();
+            }
+    
+        });
+    
+    });
+    
+    });
+</script>
+
+{% endblock %}
