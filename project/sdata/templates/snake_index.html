@@ -94,7 +94,7 @@
         {% for snake in snake_data %}
 
         <a href="{{url_for('sdata.snake_info', id=snake.id)}}"><img src="{{url_for('sdata.thumbnails', id=snake.id)}}" class="img-fluid"></a>
-        <hr>
+        <hr style="border-top: 2px solid black;">
         {% endfor %}
 
         {% endif%}

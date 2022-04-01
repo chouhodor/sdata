@@ -115,7 +115,7 @@ def img_info(id, filename):
 @sdata.route('/img_info/<int:id>')
 def geo(id):
 
-    filename = str(id) + '.png'
+    filename = str(id) + '.jpg'
     return send_from_directory('static/geo', filename)
 
 
