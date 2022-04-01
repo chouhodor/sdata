@@ -50,13 +50,13 @@
             <ul class="live-search-list" type="None" >
                 {% for snake in snake_cache %}
                 {% if name_type == 'name_scientific' %}
-                <a href="{{url_for('sdata.snake_info', id=snake.id)}}" style="color:gray;"><li>{{snake.name_scientific}}</li></a>
+                <a href="{{url_for('sdata.snake_info', id=snake.id)}}" style="color:gray;"><li><i>{{snake.name_scientific}}</i></li></a>
                 {% elif name_type == 'name_en' %}
                 <a href="{{url_for('sdata.snake_info', id=snake.id)}}" style="color:gray;"><li>{{snake.name_en}}</li></a>
                 {% elif name_type == 'name_bm' %}
                 <a href="{{url_for('sdata.snake_info', id=snake.id)}}" style="color:gray;"><li>{{snake.name_bm}}</li></a>
                 {% else %}
-                <a href="{{url_for('sdata.snake_info', id=snake.id)}}" style="color:gray;"><li>{{snake.name_scientific}}</li></a>
+                <a href="{{url_for('sdata.snake_info', id=snake.id)}}" style="color:gray;"><li><i>{{snake.name_scientific}}</i></li></a>
                 {% endif %}
                 {% endfor %}
             </ul>

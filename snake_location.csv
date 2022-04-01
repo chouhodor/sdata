@@ -1,0 +1,325 @@
+1,johor,1
+2,johor,2
+3,johor,3
+4,johor,4
+5,johor,5
+6,johor,6
+7,johor,10
+8,johor,11
+9,johor,12
+10,johor,13
+11,johor,14
+12,johor,16
+13,johor,17
+14,johor,18
+15,johor,20
+16,johor,25
+17,johor,28
+18,johor,30
+19,johor,32
+20,johor,34
+21,johor,36
+22,kedah,1
+23,kedah,2
+24,kedah,3
+25,kedah,4
+26,kedah,5
+27,kedah,6
+28,kedah,7
+29,kedah,9
+30,kedah,10
+31,kedah,11
+32,kedah,12
+33,kedah,13
+34,kedah,14
+35,kedah,16
+36,kedah,17
+37,kedah,18
+38,kedah,20
+39,kedah,21
+40,kedah,25
+41,kedah,28
+42,kedah,30
+43,kedah,32
+44,kedah,33
+45,kedah,34
+46,kedah,36
+47,kelantan,1
+48,kelantan,2
+49,kelantan,3
+50,kelantan,4
+51,kelantan,5
+52,kelantan,6
+53,kelantan,9
+54,kelantan,10
+55,kelantan,11
+56,kelantan,12
+57,kelantan,13
+58,kelantan,14
+59,kelantan,16
+60,kelantan,17
+61,kelantan,18
+62,kelantan,20
+63,kelantan,25
+64,kelantan,30
+65,kelantan,32
+66,kelantan,34
+67,kelantan,36
+68,kuala lumpur,1
+69,kuala lumpur,2
+70,kuala lumpur,3
+71,kuala lumpur,4
+72,kuala lumpur,5
+73,kuala lumpur,6
+74,kuala lumpur,9
+75,kuala lumpur,10
+76,kuala lumpur,11
+77,kuala lumpur,12
+78,kuala lumpur,13
+79,kuala lumpur,14
+80,kuala lumpur,16
+81,kuala lumpur,17
+82,kuala lumpur,18
+83,kuala lumpur,20
+84,kuala lumpur,21
+85,kuala lumpur,25
+86,kuala lumpur,30
+87,kuala lumpur,32
+88,kuala lumpur,36
+89,melaka,1
+90,melaka,2
+91,melaka,3
+92,melaka,4
+93,melaka,5
+94,melaka,6
+95,melaka,10
+96,melaka,11
+97,melaka,12
+98,melaka,13
+99,melaka,14
+100,melaka,16
+101,melaka,17
+102,melaka,18
+103,melaka,20
+104,melaka,25
+105,melaka,28
+106,melaka,30
+107,melaka,32
+108,melaka,36
+109,negeri sembilan,1
+110,negeri sembilan,2
+111,negeri sembilan,3
+112,negeri sembilan,4
+113,negeri sembilan,5
+114,negeri sembilan,6
+115,negeri sembilan,10
+116,negeri sembilan,11
+117,negeri sembilan,12
+118,negeri sembilan,13
+119,negeri sembilan,14
+120,negeri sembilan,16
+121,negeri sembilan,17
+122,negeri sembilan,18
+123,negeri sembilan,20
+124,negeri sembilan,25
+125,negeri sembilan,28
+126,negeri sembilan,30
+127,negeri sembilan,32
+128,negeri sembilan,36
+129,pahang,1
+130,pahang,2
+131,pahang,3
+132,pahang,4
+133,pahang,5
+134,pahang,6
+135,pahang,8
+136,pahang,10
+137,pahang,11
+138,pahang,12
+139,pahang,13
+140,pahang,14
+141,pahang,16
+142,pahang,17
+143,pahang,18
+144,pahang,20
+145,pahang,23
+146,pahang,25
+147,pahang,27
+148,pahang,29
+149,pahang,30
+150,pahang,32
+151,pahang,34
+152,pahang,36
+153,penang,1
+154,penang,2
+155,penang,3
+156,penang,4
+157,penang,5
+158,penang,6
+159,penang,7
+160,penang,10
+161,penang,11
+162,penang,12
+163,penang,13
+164,penang,14
+165,penang,16
+166,penang,17
+167,penang,18
+168,penang,20
+169,penang,21
+170,penang,25
+171,penang,28
+172,penang,30
+173,penang,32
+174,penang,34
+175,penang,36
+176,perak,1
+177,perak,2
+178,perak,3
+179,perak,4
+180,perak,5
+181,perak,6
+182,perak,7
+183,perak,9
+184,perak,10
+185,perak,11
+186,perak,12
+187,perak,13
+188,perak,14
+189,perak,16
+190,perak,17
+191,perak,18
+192,perak,20
+193,perak,21
+194,perak,25
+195,perak,28
+196,perak,30
+197,perak,32
+198,perak,34
+199,perak,36
+200,perlis,1
+201,perlis,2
+202,perlis,3
+203,perlis,4
+204,perlis,5
+205,perlis,6
+206,perlis,7
+207,perlis,9
+208,perlis,10
+209,perlis,11
+210,perlis,12
+211,perlis,13
+212,perlis,14
+213,perlis,16
+214,perlis,17
+215,perlis,18
+216,perlis,20
+217,perlis,21
+218,perlis,25
+219,perlis,28
+220,perlis,30
+221,perlis,32
+222,perlis,34
+223,perlis,36
+224,putrajaya,1
+225,putrajaya,2
+226,putrajaya,3
+227,putrajaya,4
+228,putrajaya,5
+229,putrajaya,6
+230,putrajaya,9
+231,putrajaya,10
+232,putrajaya,11
+233,putrajaya,12
+234,putrajaya,13
+235,putrajaya,14
+236,putrajaya,16
+237,putrajaya,17
+238,putrajaya,18
+239,putrajaya,20
+240,putrajaya,25
+241,putrajaya,30
+242,putrajaya,32
+243,putrajaya,34
+244,putrajaya,36
+245,sabah,2
+246,sabah,3
+247,sabah,4
+248,sabah,6
+249,sabah,8
+250,sabah,10
+251,sabah,11
+252,sabah,12
+253,sabah,13
+254,sabah,15
+255,sabah,16
+256,sabah,17
+257,sabah,18
+258,sabah,19
+259,sabah,22
+260,sabah,24
+261,sabah,26
+262,sabah,31
+263,sabah,32
+264,sabah,35
+265,sarawak,2
+266,sarawak,3
+267,sarawak,4
+268,sarawak,6
+269,sarawak,8
+270,sarawak,10
+271,sarawak,11
+272,sarawak,12
+273,sarawak,13
+274,sarawak,14
+275,sarawak,15
+276,sarawak,16
+277,sarawak,17
+278,sarawak,18
+279,sarawak,19
+280,sarawak,24
+281,sarawak,31
+282,sarawak,32
+283,sarawak,35
+284,selangor,1
+285,selangor,2
+286,selangor,3
+287,selangor,4
+288,selangor,5
+289,selangor,6
+290,selangor,9
+291,selangor,10
+292,selangor,11
+293,selangor,12
+294,selangor,13
+295,selangor,14
+296,selangor,16
+297,selangor,17
+298,selangor,18
+299,selangor,20
+300,selangor,25
+301,selangor,28
+302,selangor,30
+303,selangor,32
+304,selangor,34
+305,selangor,36
+306,terengganu,1
+307,terengganu,2
+308,terengganu,3
+309,terengganu,4
+310,terengganu,5
+311,terengganu,6
+312,terengganu,9
+313,terengganu,10
+314,terengganu,11
+315,terengganu,12
+316,terengganu,13
+317,terengganu,14
+318,terengganu,16
+319,terengganu,17
+320,terengganu,18
+321,terengganu,20
+322,terengganu,25
+323,terengganu,30
+324,terengganu,32
+325,terengganu,36
