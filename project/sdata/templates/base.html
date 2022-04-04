@@ -32,6 +32,7 @@
   <nav class="navbar navbar-expand-lg navbar-light">
 
     <!--<a class="navbar-brand" href="{{ url_for('sdata.index') }}">SData</a>-->
+    <a class="navbar-brand {% if nav_index %}active{% endif %}" href="{{ url_for('sdata.index') }}"><img src="../static/icon.png" alt="" width="48" height="48"></a>
     <a class="navbar-brand {% if nav_index %}active{% endif %}" href="{{ url_for('sdata.index') }}">Home</a>
     <a class="navbar-brand {% if nav_index %}active{% endif %}" href="{{ url_for('sdata.search') }}">Search</a>
     </nav>
@@ -45,7 +46,7 @@
   <footer class="pt-4 my-md-5 pt-md-5 border-top" style="padding: 1rem;">
     <div class="row" style="max-width: 900px; margin: 0 auto;">
       <div class="col">
-        <img class="mb-2" src="../static/icon2.png" alt="" width="48" height="48" style="border-radius:5px ;border: solid grey 2px;">
+        <small class="d-block mb-3 text-muted">©2022</small>
         <small class="d-block mb-3 text-muted">Created by Sufian Safaai with cooperation from MST, RECS and MyBIS</small>
       </div>
       <div class="col-3">

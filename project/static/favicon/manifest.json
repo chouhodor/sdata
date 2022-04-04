@@ -1,8 +1,8 @@
 {
 "name": "Snake Companion Webapp",
 "short_name": "Snake",
-"start_url": "/?home=true", 
-"icons": [
+"start_url": "/?home=true",
+ "icons": [
   {
    "src": "\/android-icon-36x36.png",
    "sizes": "36x36",
