@@ -14,7 +14,8 @@ def index():
     snake_cache = Snakes.query.all()
 
     return render_template('snake_index.html',
-    snake_cache=snake_cache
+    snake_cache=snake_cache,
+    active=True
     )
 
 @sdata.route('/snake_info/<int:id>')
@@ -41,7 +42,8 @@ def search():
     snake_cache = Snakes.query.all()
 
     return render_template('snake_search.html',
-    snake_cache=snake_cache
+    snake_cache=snake_cache,
+    active=True
     )
 
 

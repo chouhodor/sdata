@@ -27,14 +27,14 @@
 </head>
 {% endblock %}
 <body>
-  <header id="header" class="fixed-top">
-  <div class="container d-flex align-items-center" style="max-width: 900px;background-color: white;">
+  <header id="header" class="fixed-top" style="background-color:#e6e6e6;">
+  <div class="container d-flex align-items-center" style="max-width: 900px;">
   <nav class="navbar navbar-expand-lg navbar-light">
 
     <!--<a class="navbar-brand" href="{{ url_for('sdata.index') }}">SData</a>-->
-    <a class="navbar-brand {% if nav_index %}active{% endif %}" href="{{ url_for('sdata.index') }}"><img src="../static/icon.png" alt="" width="48" height="48"></a>
-    <a class="navbar-brand {% if nav_index %}active{% endif %}" href="{{ url_for('sdata.index') }}">Home</a>
-    <a class="navbar-brand {% if nav_index %}active{% endif %}" href="{{ url_for('sdata.search') }}">Search</a>
+    <a class="navbar-brand" href="{{ url_for('sdata.index') }}"><img src="../static/icon.png" alt="" width="48" height="48" style="border-radius: 5px;"></a>
+    <a class="navbar-brand" href="{{ url_for('sdata.index') }}">Home</a>
+    <a class="navbar-brand" href="{{ url_for('sdata.search') }}">Search</a>
     </nav>
   </div>
   

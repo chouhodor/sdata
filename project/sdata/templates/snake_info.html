@@ -10,7 +10,8 @@
 {% endblock %}
 {% block content %}
 <div class="container" style="padding-top: 10px;margin: auto;max-width: 700px;">
-  <h2 style="text-align: center;">Snake Information</h2>
+  <br>
+  <h3 style="text-align: center;">Snake Information</h3>
   <div class="card" style="width: 100%;">
     {% for i in img_files %}
     <img class="card-img-top" src="{{url_for('sdata.img_info', id=snake_intel.id, filename=i )}}" alt="Card image cap">
