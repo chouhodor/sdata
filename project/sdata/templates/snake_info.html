@@ -18,7 +18,13 @@
     {% endfor %}
 
     <div class="card-body">
-      <h5 class="card-title"><i>{{snake_intel.name_scientific}}</i><br>({{snake_intel.name_en}})</h5>
+      <h5 class="card-title"><i>{{snake_intel.name_scientific}}</i>
+        {% if snake_intel.name_en %}
+        <br>({{snake_intel.name_en}})
+        {% endif %}
+      
+      
+      </h5>
       <h6 class="card-subtitle mb-2 text-muted">{{ snake_intel.name_bm }}</h6>
       <!--<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>-->
     </div>
@@ -80,7 +86,19 @@
       <li class="list-group-item">IUCN Red List:
         <img class="img-fluid" src="{{url_for('sdata.static', filename='logo/')}}{{snake_intel.iucn+'.png'}}" alt="Card image cap" style="max-width: 64px;">
       </li>
+      {% elif snake_intel.iucn=='deficient' %}
+      <li class="list-group-item">IUCN Red List: 
+        <img class="img-fluid" src="{{url_for('sdata.static', filename='logo/')}}{{snake_intel.iucn+'.png'}}" alt="Card image cap" style="max-width: 64px;">
+      </li>
       {% elif snake_intel.iucn=='not_evaluated' %}
+      <li class="list-group-item">IUCN Red List: 
+        <img class="img-fluid" src="{{url_for('sdata.static', filename='logo/')}}{{snake_intel.iucn+'.png'}}" alt="Card image cap" style="max-width: 64px;">
+      </li>
+      {% elif snake_intel.iucn=='near_threatened' %}
+      <li class="list-group-item">IUCN Red List: 
+        <img class="img-fluid" src="{{url_for('sdata.static', filename='logo/')}}{{snake_intel.iucn+'.png'}}" alt="Card image cap" style="max-width: 64px;">
+      </li>
+      {% elif snake_intel.iucn=='endangered' %}
       <li class="list-group-item">IUCN Red List: 
         <img class="img-fluid" src="{{url_for('sdata.static', filename='logo/')}}{{snake_intel.iucn+'.png'}}" alt="Card image cap" style="max-width: 64px;">
       </li>
